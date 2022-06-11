@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: 20px;
+}
+.header {
+  display: flex;
+  align-items: center;
+}
+.header h1 {
+  font-size: 35px;
+}
+.header img {
+  height: 140px;
+  width: 140px;
+}
+.container p {
+  font-size: 25px;
+  max-width: 60%;
+  text-align: center;
+}
+.skills {
+  margin-block: 20px;
+}
+.skills img {
+  height: 120px;
+  width: 120px;
+  margin-inline: 15px;
+}

@@ -1,0 +1,11 @@
+.container {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	margin-inline: 15%;
+	gap: 5rem;
+	margin-block: 5%;
+}
+.logo {
+	height: 180px;
+	width: 180px;
+}
