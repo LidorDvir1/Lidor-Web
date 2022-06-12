@@ -1,12 +1,13 @@
 import styles from './About.module.css';
 import { Avatar } from '@mui/material';
+import ProfileImage from '../../assets/profileImage.jpeg';
 
 const About = () => {
   return (
     <section className={styles.container} id="About">
       <Avatar
         alt="Remy Sharp"
-        src="https://image.shutterstock.com/image-photo/young-handsome-man-beard-wearing-260nw-1768126784.jpg"
+        src={ProfileImage}
         sx={{ height: 250, width: 250 }}
       />
       <div>

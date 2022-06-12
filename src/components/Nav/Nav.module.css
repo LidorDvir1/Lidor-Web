@@ -31,6 +31,9 @@
   }
 }
 @media screen and (max-width: 480px) {
+  .container {
+    height: 80px;
+  }
   .container a {
     margin-inline: 5px;
   }
