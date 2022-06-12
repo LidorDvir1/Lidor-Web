@@ -32,8 +32,17 @@ export const projects = [
       'Cross-platform Mobile app where producers can upload their events and clients can quickly view and join them. Once the event starts the participants can chat with each other.',
     logo: AirTrip,
     skills: [ReactNative, NodeJs, MongoDB, SocketIO, Handlebars],
-    video: '',
     background: 'linear-gradient(to top left, #FFC629, #fae29d)',
+    images: [
+      require('../assets/Projects/AirTrip/img1.jpeg'),
+      require('../assets/Projects/AirTrip/img2.jpeg'),
+      require('../assets/Projects/AirTrip/img3.jpeg'),
+      require('../assets/Projects/AirTrip/img4.jpeg'),
+      require('../assets/Projects/AirTrip/img5.jpeg'),
+      require('../assets/Projects/AirTrip/img6.jpeg'),
+      require('../assets/Projects/AirTrip/img7.jpeg'),
+      require('../assets/Projects/AirTrip/img8.jpeg'),
+    ],
   },
   {
     name: 'Amber',
@@ -41,7 +50,12 @@ export const projects = [
     logo: Amber,
     skills: [ReactNative, NodeJs, MongoDB],
     background: 'linear-gradient(to top left, #dee0e0, #86c2c2)',
-    video: '',
+    images: [
+      require('../assets/Projects/Amber/img1.jpeg'),
+      require('../assets/Projects/Amber/img2.jpeg'),
+      require('../assets/Projects/Amber/img3.jpeg'),
+      require('../assets/Projects/Amber/img4.jpeg'),
+    ],
   },
   {
     name: 'Do You know me?',
@@ -50,15 +64,12 @@ export const projects = [
     logo: DoYouKnowMe,
     skills: [ReactNative],
     background: 'linear-gradient(to top left, #a5e5fa, #f09a3e)',
-    video: '',
-  },
-  {
-    name: 'Amber Web',
-    description: 'Jewelry web store',
-    logo: Amber,
-    skills: [React, NodeJs, MongoDB],
-    background: 'linear-gradient(to top left, #7c7d7d, #3d3d3c)',
-    video: '',
+    images: [
+      require('../assets/Projects/DoYouKnowMe/img1.jpeg'),
+      require('../assets/Projects/DoYouKnowMe/img2.jpeg'),
+      require('../assets/Projects/DoYouKnowMe/img3.jpeg'),
+      require('../assets/Projects/DoYouKnowMe/img4.jpeg'),
+    ],
   },
 ];
 export const experienceArr = [

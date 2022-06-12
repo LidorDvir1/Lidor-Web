@@ -29,6 +29,22 @@
   width: 120px;
   margin-inline: 15px;
 }
+.images {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3vh;
+}
+.images img {
+  height: 652px;
+  width: 293px;
+  border-radius: 40px;
+  overflow: hidden;
+}
+@media screen and (max-width: 1430px) {
+  .images {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 @media screen and (max-width: 1080px) {
   .container p {
     max-width: 80%;
@@ -36,6 +52,11 @@
   .skills img {
     height: 85px;
     width: 85px;
+  }
+}
+@media screen and (max-width: 680px) {
+  .images {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 @media screen and (max-width: 480px) {

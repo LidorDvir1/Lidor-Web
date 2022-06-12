@@ -1,13 +1,12 @@
 import styles from './Projects.module.css';
 import { projects } from '../../utills/data';
-import ReactPlayer from 'react-player';
 
 const SingleProject = ({
   name,
   description,
   logo,
   skills,
-  video,
+  images,
   background,
 }) => {
   return (
@@ -22,13 +21,11 @@ const SingleProject = ({
           <img src={skill} alt="skill" key={skill} />
         ))}
       </div>
-      <ReactPlayer
-        url="https://res.cloudinary.com/lineapp/video/upload/v1654522630/zciyesojvjxqb2x8crhc.mp4"
-        controls
-        width="352px"
-        height="652px"
-        volume={1}
-      />
+      <div className={styles.images}>
+        {images.map((image) => (
+          <img src={image} alt="projectImage" key={image} />
+        ))}
+      </div>
     </div>
   );
 };
