@@ -11,11 +11,7 @@ const SingleProject = ({
   background,
 }) => {
   return (
-    <section
-      className={[styles.container]}
-      style={{ background }}
-      id="projects"
-    >
+    <div className={[styles.container]} style={{ background }}>
       <div className={styles.header}>
         <img src={logo} alt="logo" />
         <h1>{name}</h1>
@@ -23,7 +19,7 @@ const SingleProject = ({
       <p>{description}</p>
       <div className={styles.skills}>
         {skills.map((skill) => (
-          <img src={skill} alt="skill" />
+          <img src={skill} alt="skill" key={skill} />
         ))}
       </div>
       <ReactPlayer
@@ -33,15 +29,15 @@ const SingleProject = ({
         height="652px"
         volume={1}
       />
-    </section>
+    </div>
   );
 };
 
 const Projects = () => {
   return (
-    <section id="projects">
+    <section id="Projects">
       {projects.map((project) => (
-        <SingleProject {...project} />
+        <SingleProject {...project} key={project.name} />
       ))}
     </section>
   );

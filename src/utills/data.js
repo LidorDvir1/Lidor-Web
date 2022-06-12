@@ -10,6 +10,20 @@ import React from '../assets/Skills/react.png';
 import IDF from '../assets/Logos/idf.jpg';
 import ATech from '../assets/Logos/a-tech.jpg';
 import ThreePel from '../assets/Logos/3pel.png';
+import Html from '../assets/Skills/html.png';
+import Css from '../assets/Skills/css.png';
+import Js from '../assets/Skills/js.png';
+import { AiFillLinkedin } from '@react-icons/all-files/ai/AiFillLinkedin';
+import { AiOutlineMail } from '@react-icons/all-files/ai/AiOutlineMail';
+import { AiOutlinePhone } from '@react-icons/all-files/ai/AiOutlinePhone';
+
+const stylesObj = {
+  contactIcon: {
+    fontSize: '50px',
+  },
+};
+
+export const navButtons = ['Home', 'About', 'Experience', 'Projects'];
 
 export const projects = [
   {
@@ -49,16 +63,18 @@ export const projects = [
 ];
 export const experienceArr = [
   {
-    name: 'Network Administrator',
-    companyName: 'IDF',
-    description: 'Network Administrator at Tikshov.',
+    name: 'Full Stack Developer',
+    companyName: '3Pel.Ventures',
+    description:
+      '3PEL Ventures is a holdings management group investing in and working with super-talented companies and dedicated to helping entrepreneurs and startups kick off easily and fast.',
     points: [
-      'Working with many customers and technical teams.',
-      'Managing and dealing with problems and crises.',
-      'Ability to work under pressure and be able to respond quickly.',
+      'Building complex features and interfaces for React Native applications.',
+      'Created and tested Node.js backend code.',
+      'Set up and maintained MongoDB database.',
+      'Experience with OAuth, Email Verification, Real-Time applications using Socket.io.',
     ],
-    logo: IDF,
-    date: '08 / 2020 - 11 / 2021',
+    logo: ThreePel,
+    date: '02 / 2022 - Present',
   },
   {
     name: 'Full Stack Developer',
@@ -74,17 +90,39 @@ export const experienceArr = [
     date: '11 / 2021 - 02 / 2022',
   },
   {
-    name: 'Full Stack Developer',
-    companyName: '3Pel.Ventures',
-    description:
-      '3PEL Ventures is a holdings management group investing in and working with super-talented companies and dedicated to helping entrepreneurs and startups kick off easily and fast.',
+    name: 'Network Administrator',
+    companyName: 'IDF',
+    description: 'Network Administrator at Tikshov.',
     points: [
-      'Building complex features and interfaces for React Native applications.',
-      'Created and tested Node.js backend code.',
-      'Set up and maintained MongoDB database.',
-      'Experience with OAuth, Email Verification, Real-Time applications using Socket.io.',
+      'Working with many customers and technical teams.',
+      'Managing and dealing with problems and crises.',
+      'Ability to work under pressure and be able to respond quickly.',
     ],
-    logo: ThreePel,
-    date: '02 / 2022 - Present',
+    logo: IDF,
+    date: '08 / 2020 - 11 / 2021',
+  },
+];
+export const skills = [
+  Html,
+  Css,
+  Js,
+  React,
+  ReactNative,
+  NodeJs,
+  MongoDB,
+  SocketIO,
+];
+export const contactOptions = [
+  {
+    info: 'lidor@gmail.com',
+    icon: <AiOutlineMail style={stylesObj.contactIcon} />,
+  },
+  {
+    info: 'https://www.linkedin.com/in/lidor-dvir/',
+    icon: <AiFillLinkedin style={stylesObj.contactIcon} />,
+  },
+  {
+    info: '054-5861867',
+    icon: <AiOutlinePhone style={stylesObj.contactIcon} />,
   },
 ];

@@ -1,6 +1,17 @@
 import styles from './Nav.module.css';
+import { navButtons } from '../../utills/data';
+import React, { useState } from 'react';
 
-const Nav = () => {
+const styleObj = {
+  isOnTopBackground: {
+    backgroundColor: 'rgba(0, 0, 0, 0.3)',
+  },
+  isNotOnTopBackground: {
+    backgroundColor: 'rgba(0, 0, 0, 0.7)',
+  },
+};
+
+const Content = React.memo(() => {
   const handleClick = (e) => {
     e.preventDefault();
     const target = e.target.getAttribute('href');
@@ -13,22 +24,38 @@ const Nav = () => {
   };
 
   return (
-    <nav className={styles.container}>
+    <>
       <h1>Lidor Dvir</h1>
       <div>
-        <a href="#home" onClick={handleClick}>
-          Home
-        </a>
-        <a href="#about" onClick={handleClick}>
-          About
-        </a>
-        <a href="#experience" onClick={handleClick}>
-          Experience
-        </a>
-        <a href="#projects" onClick={handleClick}>
-          Projects
-        </a>
+        {navButtons.map((navButton) => (
+          <a href={`#${navButton}`} onClick={handleClick} key={navButton}>
+            {navButton}
+          </a>
+        ))}
       </div>
+    </>
+  );
+});
+
+const Nav = () => {
+  const [isOnTop, setIsOnTop] = useState(true);
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY === 0 && !isOnTop) {
+      setIsOnTop(true);
+    } else if (window.scrollY !== 0 && isOnTop) {
+      setIsOnTop(false);
+    }
+  });
+
+  return (
+    <nav
+      className={styles.container}
+      style={
+        isOnTop ? styleObj.isOnTopBackground : styleObj.isNotOnTopBackground
+      }
+    >
+      <Content />
     </nav>
   );
 };

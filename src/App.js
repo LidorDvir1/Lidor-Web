@@ -7,7 +7,7 @@ import Contact from './components/Contact/Contact';
 import Nav from './components/Nav/Nav';
 import Projects from './components/Projects/Projects';
 
-function App() {
+const App = () => {
   return (
     <main className={styles.container}>
       <Nav />
@@ -19,6 +19,6 @@ function App() {
       <Contact />
     </main>
   );
-}
+};
 
 export default App;

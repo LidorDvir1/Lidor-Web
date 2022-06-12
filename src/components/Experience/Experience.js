@@ -10,7 +10,7 @@ const SingleExperience = ({
   date,
 }) => {
   return (
-    <section className={styles.container} id="experience">
+    <div id="Experience">
       <div className={styles.content}>
         <div>
           <img src={logo} alt="logo" />
@@ -21,19 +21,18 @@ const SingleExperience = ({
         <h3>{date}</h3>
         <h4 className={styles.description}>{description}</h4>
         {points.map((point) => (
-          <p>• {point}</p>
+          <p key={point}>• {point}</p>
         ))}
       </div>
-    </section>
+    </div>
   );
 };
 
 const Experience = () => {
   return (
-    <section id="experience" style={{ display: 'flex' }}>
-      <h1>Experience</h1>
+    <section id="Experience" className={styles.container}>
       {experienceArr.map((experience) => (
-        <SingleExperience {...experience} />
+        <SingleExperience {...experience} key={experience.date} />
       ))}
     </section>
   );
