@@ -1,11 +1,12 @@
+import { Suspense, lazy } from 'react';
 import styles from './App.module.css';
 import Hero from './components/Hero/Hero';
 import About from './components/About/About';
 import Skills from './components/Skills/Skills';
 import Experience from './components/Experience/Experience';
-import Contact from './components/Contact/Contact';
 import Nav from './components/Nav/Nav';
-import Projects from './components/Projects/Projects';
+const Contact = lazy(() => import('./components/Contact/Contact'));
+const Projects = lazy(() => import('./components/Projects/Projects'));
 
 const App = () => {
   return (
@@ -15,8 +16,10 @@ const App = () => {
       <About />
       <Skills />
       <Experience />
-      <Projects />
-      <Contact />
+      <Suspense fallback={<></>}>
+        <Projects />
+        <Contact />
+      </Suspense>
     </main>
   );
 };
