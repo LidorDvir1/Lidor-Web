@@ -60,7 +60,7 @@ export const projects = [
   {
     name: 'Do You know me?',
     description:
-      'Cross-platform Friends game where you can check how much your friends know you.',
+      'Cross-platform Friends game where you can check how well your friends know you. Published to Google Play.',
     logo: DoYouKnowMe,
     skills: [ReactNative],
     background: 'linear-gradient(to top left, #a5e5fa, #f09a3e)',
@@ -85,7 +85,7 @@ export const experienceArr = [
       'Experience with OAuth, Email Verification, Real-Time applications using Socket.io.',
     ],
     logo: ThreePel,
-    date: '02 / 2022 - Present',
+    date: '11 / 2021 - Present',
   },
   {
     name: 'Full Stack Developer',
@@ -125,7 +125,7 @@ export const skills = [
 ];
 export const contactOptions = [
   {
-    info: 'lidor@gmail.com',
+    info: 'lidor4001@gmail.com',
     icon: <AiOutlineMail style={stylesObj.contactIcon} />,
   },
   {
